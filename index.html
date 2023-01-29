@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson23</title>
+    <style>
+        div {
+            height: 30px;
+            width: 30px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+
+        /* function Test1(x, y) {
+            this.x = x;
+            this.y = y; */
+
+            /* this.show = function(){
+                console.log(this.x + ' ' + this.y);
+            } */
+       /*  }
+         Test1.prototype.show = function(){
+            console.log(this.x + ' ' + this.y);
+         }
+
+         let test1 = new Test1(3, 5);
+         let test2 = new Test1(4, 6);
+
+         console.log(test1);
+         console.log(test2);
+
+         let arr2 = [1, 2, 3];
+
+         Array.prototype.show = function() {
+            console.log('мне лень, давай потом');
+         } */
+
+
+         /* 1 */
+        /* function Calculator(x, y) {
+            this.x = x;
+            this.y = y;
+         }
+         Calculator.prototype.sum = function(){
+            console.log(`сумма: ${this.x + this.y}`);
+         }
+         Calculator.prototype.sub = function(){
+            console.log(`разность: ${this.x - this.y}`);
+         }
+         Calculator.prototype.mul = function(){
+            console.log(`произведение: ${this.x * this.y}`);
+         }
+         Calculator.prototype.div = function(){
+            console.log(`деление: ${this.x / this.y}`);
+         }
+         let test = new Calculator(5, 2);
+         console.log(test);
+         test.sum();
+         test.sub();
+         test.mul();
+         test.div(); */
+
+         /* 2 */
+        /* function Human(age, gender, name) {
+            this.age = age;
+            this.gender = gender;
+            this.name = name;
+         }
+        Human.prototype.tell = function() {
+            console.log(`Здравствуйте, меня зовут ${this.name}, мой пол ${this.gender}, мне ${this.age}`);
+         }
+
+        let hum = new Human(17, 'm', 'John');
+        hum.tell(); */
+
+        /* 3 */
+
+        function getRandom(min, max){
+        return Math.ceil(Math.random() * (max - min) + min);
+        }
+
+        function Spawn(x, y, color) {
+            this.x = x;
+            this.y = y;
+            this.color = `rgb(${getRandom(0, 255)}, ${getRandom(0, 255)}, ${getRandom(0, 255)})`;
+        }
+        Spawn.prototype.div = function() {
+            let a = document.createElement('div');
+            document.body.append(a);
+            a.style.top = `${this.y}px`;
+            a.style.left = `${this.x}px`;
+            a.style.backgroundColor = this.color;
+        }
+
+         let circle = new Spawn(20, 30);
+         console.log(circle);
+         circle.div();
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    </script>
+
+</body>
+</html>
